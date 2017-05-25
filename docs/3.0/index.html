@@ -2000,9 +2000,9 @@ $("#example-table").tabulator("setColumns", newColumns , false) //completely ove
                     </ul>
 
                     <pre class="prettyprint lang-js">$("#example-table").tabulator({
-    rowFormatter:function(row, data){
-        if(data.age >= 18){
-            row.addClass("success"); //mark rows with age greater than or equal to 18 as successfull;
+    rowFormatter:function(row){
+        if(row.getData().age >= 18){
+            row.getElement().addClass("success"); //mark rows with age greater than or equal to 18 as successfull;
         }
     },
 });</pre>
@@ -2057,9 +2057,9 @@ $("#example-table").tabulator("setColumns", newColumns , false) //completely ove
                     </ul>
 
                     <pre class="prettyprint lang-js">$("#example-table").tabulator({
-    rowFormatter:function(row, data){
-        if(data.age < 18){
-            row.addClass("warning"); //mark rows with age less than 18 with a warning state;
+    rowFormatter:function(row){
+        if(row.getData().age < 18){
+            row.getElement().addClass("warning"); //mark rows with age less than 18 with a warning state;
         }
     },
 });</pre>
