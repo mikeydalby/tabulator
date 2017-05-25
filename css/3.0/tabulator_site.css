@@ -5,7 +5,7 @@
   font-size: 14px;
   text-align: left;
   overflow: hidden; }
-  .tabulator.tabulator-block-select {
+  .tabulator:not(.example-themes).tabulator-block-select {
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -35,6 +35,7 @@
         position: relative;
         padding: 8px; }
         .tabulator:not(.example-themes) .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title {
+          box-sizing: border-box;
           width: 100%;
           white-space: nowrap;
           overflow: hidden;
@@ -81,7 +82,7 @@
         .tabulator:not(.example-themes) .tabulator-header .tabulator-col .tabulator-header-filter svg {
           margin-top: 3px; }
       .tabulator:not(.example-themes) .tabulator-header .tabulator-col.tabulator-sortable .tabulator-col-title {
-        width: calc(100% - 25px); }
+        padding-right: 25px; }
       .tabulator:not(.example-themes) .tabulator-header .tabulator-col.tabulator-sortable:hover {
         cursor: pointer;
         background-color: #090909; }
@@ -206,6 +207,8 @@
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis; }
+          .tabulator:not(.example-themes) .tabulator-tableHolder .tabulator-table .tabulator-row .tabulator-cell:last-of-type {
+            border-right: none; }
           .tabulator:not(.example-themes) .tabulator-tableHolder .tabulator-table .tabulator-row .tabulator-cell.tabulator-editing {
             border: 1px solid #1D68CD;
             padding: 0; }
